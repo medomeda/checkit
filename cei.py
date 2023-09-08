@@ -45,6 +45,10 @@ def find_in_cei(nom, prenom, jour, mois, annee):
 
 app = Flask(__name__)
 
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
 @app.route("/verifycei", methods=['POST'])
 def get_electeur():
     
